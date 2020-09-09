@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Recipe Book</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div></div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+                <a 
+                    class="nav-link" 
+                    href="#"
+                    [ngClass]="{'activeLink' : currentPage==='recipe'||currentPage===''}"
+                    (click)="onSelect('recipe')"
+                >Recipes</a>
+            </li>
+            <li class="nav-item">
+                <a 
+                    class="nav-link" 
+                    href="#" 
+                    [ngClass]="{'activeLink' : currentPage==='shopping'}"
+                    (click)="onSelect('shopping')"
+                >Shopping List</a>
+            </li>            
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle nav-link" role="button">
+                    Manage <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Save Data</a></li>
+                    <li><a href="#">Fetch Data</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div> 
+</nav>
